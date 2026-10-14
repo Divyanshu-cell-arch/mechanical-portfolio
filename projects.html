@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projects — Divyanshu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111111;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+
+/* NAV */
+
+    nav {
+      height: 110px;
+      padding: 0 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+    }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #16804f;
+    }
+
+    .nav-links a.active {
+      color: #16804f;
+    }
+
+    .nav-links a[href="resume.html"] {
+      background: #16804f;
+      color: #ffffff;
+      padding: 20px 25px;
+      border-radius: 0;
+    }
+
+
+/* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+
+    /* PROJECTS */
+
+
+    .about-hero {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 82%
+            );
+                }
+
+    .about-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+        display: block;
+        }
+
+
+/* About hero on mobile */
+@media (max-width: 600px) {
+  .about-hero {
+    height: 300px;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 90%
+    );
+  }
+
+  .about-hero img {
+    object-position: center 35%;
+  }
+}
+
+
+    .projects-header {
+      display: grid;
+      grid-template-columns: 100%;
+      margin-bottom: 0px;
+      transform: translate(250px,-50px);
+    }
+
+    .projects-label {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+  .projects-header h1 {
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 25px;
+    text-align: center;
+    font-size: 44px;
+    line-height: 1.4;
+    font-weight: 500;
+    transform: translate(-280px,15px);
+  }
+
+    .projects-header p {
+      max-width: 750px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #555555;
+    }
+
+
+    /* PROJECT GROUPS */
+.projects-page {
+  width: 100%;
+  padding: 45px 40px 60px 80px;
+  margin: 0;
+}
+
+.project-group {
+  margin-bottom: 55px;
+}
+
+.project-group-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 120px;
+  row-gap: 40px;
+
+  width: 75%;
+  max-width: 1120px;
+  margin: 1% auto;
+}
+
+
+    .project-item {
+      text-decoration: none;
+      color: #111111;
+      display: block;
+    }
+
+
+.project-image {
+  width: 360px;
+  height: 240px;
+  background: #eeeeee;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.project-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+    display: inline-block;
+  margin-top: 14px;
+  padding: 20px 35px;
+  background: #16804f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  transform: translateX(60px);
+}
+    .project-name {
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .project-year {
+      font-size: 15px;
+      color: #777777;
+    }
+
+    .project-group:last-child {
+      margin-bottom: 0px;
+    }
+
+/* Enlarge only the Sole Dirt Cleaner image */
+.project-item[href*="automated-dirt-removal"] .project-image img {
+  transform: scaleX(1.2);
+}
+
+.project-item[href*="robotic-arm.html"] .project-image img {
+  transform: scaleY(1.05);
+}
+
+.project-item[href*="hybrid-cooling"] .project-image img {
+  transform: scaleX(1.07);
+}
+
+.project-item[href*="hydraulic-press.html"] .project-image img {
+  transform: scaleY(1.41);
+}
+
+.project-item[href*="wheelchair.html"] .project-image img {
+  transform: scaleX(1.07);
+}
+
+/* Collaborative Work */
+.collaborative-work {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+  color: #ffffff;
+
+  width: 100%;
+  margin-left: 0;
+  padding: 35px 40px 80px 80px;
+}
+
+
+/* Collaborative Work — full-width green section */
+.project-group:nth-of-type(2) {
+  position: relative;
+  isolation: isolate;
+
+  background: transparent;
+  color: #ffffff;
+
+  width: auto;
+  margin-left: 0;
+  padding: 35px 0 80px;
+}
+
+.project-group:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+
+  transform: translateX(-51.4%);
+  background: #16804f;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.project-group:nth-of-type(2) .project-group-title,
+.project-group:nth-of-type(2) .project-name {
+  color: #ffffff;
+}
+
+/* Keep the cards centered */
+.project-group:nth-of-type(2) .project-list {
+  width: 75%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Desktop */
+.desktop-break {
+  display: inline;
+}
+
+
+/* Projects page on mobile */
+@media (max-width: 600px) {
+
+  /* Projects header */
+
+@media (max-width: 600px) {
+  .desktop-break {
+    display: none;
+  }
+
+  .projects-header {
+    display: block;
+    transform: none;
+    padding: 35px 24px 30px;
+    text-align: center;
+    transform: translateY(25px)
+  }
+
+  .projects-header h1 {
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto 18px;
+    width: 350px;
+    transform: translate(-25px,-30px);
+  }
+}
+
+
+  .projects-label {
+    font-size: 20px;
+  }
+
+
+
+  .projects-header p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* Project groups */
+  .projects-page {
+    padding: 30px 24px 45px;
+  }
+
+  .project-group {
+    margin-bottom: 40px;
+  }
+
+  .project-group-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* One project card per row */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 24px 14px;
+    margin: 0 auto;
+  }
+
+  .project-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 110px;
+    margin: 0;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .project-info {
+    justify-content: flex-start;
+    padding-top: 8px;
+    width: 100%;
+    margin-top: 7px;
+    padding: 9px 2px;
+    font-size: 8px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateX(5px);
+  }
+
+  .project-name {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .project-year {
+    font-size: 12px;
+  }
+
+  /* Collaborative Work — green section */
+  .collaborative-work {
+    padding: 30px 24px 50px;
+  }
+
+  .project-group:nth-of-type(2) {
+    padding: 30px 0 55px;
+    margin-bottom: 35px;
+  }
+
+  .project-group:nth-of-type(2)::before {
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  }
+
+
+
+  .project-group:nth-of-type(2) .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: none;
+    gap: 24px 14px;
+    margin: 0 auto;
+  }
+
+
+}
+
+
+    /* FOOTER */
+
+    footer {
+      min-height: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      padding: 50px 60px 35px;
+
+      color: #16804f;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-contact a,
+    .footer-nav a {
+      color: #16804f;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+/* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+.footer-nav {
+  margin-top: 43px;
+}
+
+.footer-contact .fa-brands {
+  font-size: 24px;
+  color: #16804f;
+}
+
+.footer-contact a:hover .fa-brands {
+  color: #000;
+}
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+<a href="index.html" class="nav-title">Divyanshu</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+      <section class="about-hero">
+    <img src="27269527-58f0-41a1-a477-c0694f36652a.jpg" alt="Divyanshu">
+    </section>
+
+  <!-- PROJECTS -->
+
+  <main class="projects-page">
+
+    <header class="projects-header">
+
+
+
+      <div>
+
+
+    <h1>
+      A collection of things I’ve chosen to
+      explore, build and see how far
+      I could take them
+    </h1>
+
+
+
+      </div>
+
+    </header>
+
+
+    <!-- INDEPENDENT WORK -->
+
+    <section class="project-group">
+
+      <h2 class="project-group-title">
+        Independent Work
+      </h2>
+
+      <div class="project-list">
+
+        <a href="automated-dirt-removal.html" class="project-item">
+          <div class="project-image">
+              <img src="Images/Sole_Dirt_Cleaner/Assembly.jpg" alt="Sole Dirt Cleaner">
+              
+          </div>
+
+          <div class="project-info">
+            <div class="project-name">
+              Automated Footwear<br> Outsole Cleaner
+            </div>
+
+
+          </div>
+        </a>
+
+
+        <a href="robotic-arm.html" class="project-item">
+          <div class="project-image">
+            <img src="Images/Robotic Arm/Assembly.PNG" alt="Robotic Arm">
+          </div> 
+
+          <div class="project-info">
+            <div class="project-name">
+              Pick and Place<br>Robotic Arm 
+            </div>
+
+
+          </div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- COLLABORATIVE WORK -->
+
+<section class="project-group collaborative-work">
+
+      <h2 class="project-group-title">
+        Collaborative Work
+      </h2>
+
+      <div class="project-list">
+
+        <a href="hybrid-cooling.html" class="project-item">
+          <div class="project-image">
+            <img src="Images/Hybrid Cooling System/Assembly2.PNG" alt="Hybrid Cooling System">
+          </div>
+
+          <div class="project-info">
+            <div class="project-name">
+              Hybrid Cooling System 
+            </div>
+
+
+          </div>
+        </a>
+
+
+        <a href="hydraulic-press.html" class="project-item">
+          <div class="project-image">
+            <img src="Images/Hydraulic Press/Assembly_shaded.jpeg" alt="Hydraulic Press">
+          </div>
+
+          <div class="project-info">
+            <div class="project-name">
+              Hydraulic Press
+            </div>
+
+
+          </div>
+        </a>
+
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- COMPETITIONS -->
+
+    <section class="project-group">
+
+      <h2 class="project-group-title">
+        Competitions
+      </h2>
+
+      <div class="project-list">
+
+        <a href="wheelchair.html" class="project-item">
+          <div class="project-image">
+            <img src="Images/Wheelchair/Assembly.PNG" alt="Stair-Climbing Wheelchair">
+          </div>
+
+          <div class="project-info">
+            <div class="project-name">
+              Stair Climbing<br>Wheelchair 
+            </div>
+
+
+          </div>
+        </a>
+
+
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-left">
+
+      <p class="footer-copy">
+        © 2026 Divyanshu. All rights reserved.
+      </p>
+
+      <div class="footer-contact">
+       <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+        <a href="https://grabcad.com/divyanshu-10" target="_blank">grabcad</a>
+        <a href="mailto:divyanshu0197@gmail.com">divyanshu0197@gmail.com</a>
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>

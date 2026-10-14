@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Design of Hydraulic Press — Divyanshu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111111;
+      background: #ffffff;
+    }
+
+
+    /* =========================
+       NAV
+    ========================= */
+
+    nav {
+      height: 110px;
+      padding: 0 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+    }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #16804f;
+    }
+
+    .nav-links a.active {
+      color: #16804f;
+    }
+
+    .nav-links a[href="resume.html"] {
+      background: #16804f;
+      color: #ffffff;
+      padding: 20px 25px;
+      border-radius: 0;
+    }
+
+    /* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+    /* =========================
+       PROJECT PAGE
+    ========================= */
+
+    .project-page {
+      padding: 0;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .project-hero-image {
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+              clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 82%
+            );
+    }
+
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* =========================
+       PROJECT TITLE
+    ========================= */
+
+    .project-title {
+      text-align: center;
+      padding: 70px 40px;
+    }
+
+    .project-title h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       OVERVIEW
+    ========================= */
+
+    .project-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      padding: 70px 80px 90px;
+    }
+
+
+
+
+    .overview-image {
+      height: 250px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+/* Image above Why? */
+.overview-column:first-child .overview-image img {
+  transform: scale(0.9,0.85);
+}
+
+/* Image above What? */
+.overview-column:nth-child(2) .overview-image img {
+  transform: scale(0.9,0.85);
+}
+
+/* Image above Results? */
+.overview-column:nth-child(3) .overview-image img {
+  transform: scale(0.87,1.35);
+}
+
+
+    .overview-column {
+    text-align: center;
+    }
+
+    .overview-title {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 25px;
+    background: #16804f;
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    }
+
+    .overview-text {
+    background: #16804f;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 0;
+    }
+
+    .overview-text ul {
+    padding-left: 20px;
+    margin: 0;
+    }
+
+    .overview-text li {
+    margin-bottom: 25px;
+    }
+
+    .overview-text li:last-child {
+    margin-bottom: 0;
+    }
+
+
+
+    /* =========================
+       HOW
+    ========================= */
+
+    .project-how {
+      background: #16804f;
+      color: #ffffff;
+
+      padding: 90px 80px;
+
+      display: grid;
+      grid-template-columns: 28% 72%;
+
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 88%,
+        0 100%
+      );
+    }
+
+    .how-title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .how-content {
+      max-width: 850px;
+    }
+
+    .how-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+
+
+    /* =========================
+    ASSEMBLY
+    ========================= */
+
+    .project-assembly {
+    padding: 70px 80px 50px;
+    }
+
+    .assembly-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    }
+
+    .assembly-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 35px;
+    max-width: 700px;
+    }
+
+    .assembly-image {
+    width: 100%;
+    height: 560px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+
+  .assembly-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scaleX(1.65);
+}
+
+    /* =========================
+    COMPONENT BREAKDOWN
+    ========================= */
+
+    .component-section {
+    padding: 50px 80px 90px;
+    }
+
+    .component-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    }
+
+    .component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px 30px;
+    }
+
+    .component-card {
+    min-width: 0;
+    }
+
+/* Keep all image boxes consistent */
+.component-image {
+  width: 100%;
+  height: 300px; /* Use your preferred existing height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* Preserve the image proportions */
+.component-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Add breathing room before the title */
+.component-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Space the description and material consistently */
+.component-card p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.component-image img.larger-component {
+transform: scale(1.113); /* Adjust the scale values as needed */
+}
+
+    .component-name {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+
+    .component-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 8px;
+    }
+
+    .component-material {
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.5;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+    .project-assembly {
+        padding: 50px 25px 30px;
+    }
+
+    .assembly-heading,
+    .component-heading {
+        font-size: 26px;
+    }
+
+    .assembly-image {
+        height: 205px;
+    }
+
+    .component-section {
+        padding: 40px 25px 60px;
+    }
+
+    .component-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 20px;
+    }
+
+    .component-image {
+        height: 200px;
+    }
+    }
+
+    @media (max-width: 550px) {
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .component-image {
+        height: 260px;
+    }
+    }
+
+
+
+
+
+    /* =========================
+       BACK TO PROJECTS
+    ========================= */
+
+    .back-projects {
+      display: block;
+      width: fit-content;
+
+      margin: 20px 80px 80px;
+
+      color: #16804f;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .back-projects:hover {
+      color: #126b42;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      min-height: 250px;
+
+      padding: 50px 60px 35px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      color: #16804f;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-contact,
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    footer a {
+      color: #16804f;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav {
+        padding: 0 25px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .project-hero-image {
+        height: 350px;
+      }
+
+      .project-title {
+        padding: 50px 25px;
+      }
+
+      .project-title h1 {
+        font-size: 34px;
+      }
+
+      .project-overview {
+        grid-template-columns: 1fr;
+        padding: 50px 25px;
+      }
+
+      .project-how {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 60px 25px;
+      }
+
+      .project-skills {
+        padding: 60px 25px;
+      }
+
+      .skills-images {
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .back-projects {
+        margin: 20px 25px 60px;
+      }
+    }
+      /* Fix mobile page height and footer position */
+@media (max-width: 600px) {
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav,
+  .about-hero {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    margin-top: 0;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav,
+  .about-hero {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    margin-top: 0;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+
+  
+    .footer-nav {
+  margin-top: 43px;
+}
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAV
+  ========================= -->
+
+  <nav>
+
+<a href="index.html" class="nav-title">Divyanshu</a>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="projects.html">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="resume.html">
+          Resume
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =========================
+       PROJECT
+  ========================= -->
+
+  <main class="project-page">
+
+
+    <!-- HERO IMAGE -->
+
+    <section class="project-hero-image">
+
+      <img
+        src="27269527-58f0-41a1-a477-c0694f36652a.jpg"
+        alt="Design of Hydraulic Press"
+      >
+
+    </section>
+
+
+    <!-- PROJECT TITLE -->
+
+    <section class="project-title">
+
+      <h1>
+        Stair Climbing Wheelchair 
+      </h1>
+
+    </section>
+
+
+    <!-- =========================
+         WHY / WHAT / RESULTS
+    ========================= -->
+
+
+
+<section class="project-overview">
+
+  <!-- WHY -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+                    <img
+            src="Images/Wheelchair/Polished Chrome Wheelchair on White Background.png"
+            alt="DS3240 Servo Motor"
+            class="larger-component">
+    </div>
+
+    <div class="overview-title">Why?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Conventional wheelchairs are built primarily for flat surfaces and cannot independently navigate staircases.</li>
+        <li>Existing stair-climbing wheelchairs can be expensive and complex, making them inaccessible to many users.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- WHAT -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+      <img src="Images/Wheelchair/wireframe3.PNG" alt="CAD design of the robotic arm">
+    </div>
+
+    <div class="overview-title">What?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Developed the CAD design of a stair-climbing wheelchair using a novel sun–planet gear mechanism for movement across flat surfaces and staircases.</li>
+
+
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- RESULTS -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+      <img src="Images/Wheelchair/Wheel+Chair+Final+version (3).png" alt="Robotic arm design and assembly">
+    </div>
+
+    <div class="overview-title">Results?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Developed a mechanical concept for transitioning between flat-ground mobility and stair climbing.</li>
+        <li>Focused on a lightweight, cost-effective alternative to conventional stair-climbing wheelchair systems.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+    <!-- =========================
+         HOW
+    ========================= -->
+
+    <section class="project-how">
+
+      <div class="how-title">
+        How?
+      </div>
+
+      <div class="how-content">
+
+        <p>
+            Sun–Planet Gear System: Transmits hand-driven power to the rear wheels for movement on flat surfaces.
+            
+        </p>
+
+        <p>
+           Lever-Based Mode Switching: Changes the mechanism from driving the wheels to rotating the planet carrier, enabling stair-climbing movement.
+        </p>
+        <p>
+          Forward–Backward Control: Uses the gear mechanism and lever-based mode selection to adapt movement between flat-ground travel and stair climbing, with a hydraulic disc brake for controlled stopping.
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+        COMPLETE ASSEMBLY
+    ========================= -->
+
+    <section class="project-assembly">
+
+    <h2 class="assembly-heading">
+        The Assembly
+    </h2>
+
+
+
+    <div class="assembly-image">
+        <img
+        src="Images/Wheelchair/Assembly.PNG"
+        alt="Complete hydraulic press CAD assembly"
+        >
+    </div>
+
+    </section>
+
+
+    <!-- =========================
+        COMPONENT BREAKDOWN
+    ========================= -->
+
+    <section class="component-section">
+
+    <h2 class="component-heading">
+        Component Breakdown
+    </h2>
+
+    <div class="component-grid">
+
+        <!-- 01: H-FRAME -->
+        <div class="component-card">
+        <div class="component-image">
+                    <img
+            src="Images/Wheelchair/Chair.PNG"
+            alt="DS3240 Servo Motor"
+            class="larger-component">
+        </div>
+        <h3 class="component-name">Chair</h3>
+        <p class="component-description">
+            Supports the user and provides the main seating structure of the wheelchair 
+        </p>
+        <p class="component-material">
+            Material: Mild steel frame 
+        </p>
+        </div>
+
+        <!-- 07: FASTENERS -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/planet system.PNG" alt="Fasteners CAD model">
+        </div>
+        <h3 class="component-name">Wheel arrangement</h3>
+        <p class="component-description">
+            Houses the three-wheel planetary arrangement used to negotiate stair steps 
+        </p>
+        <p class="component-material">
+            Material: Aluminium alloy for structural arms
+        </p>
+        </div>
+
+        <!-- 08: BASE PLATE -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/backwheel.PNG" alt="Base plate CAD model">
+        </div>
+        <h3 class="component-name">Back wheel structure</h3>
+        <p class="component-description">
+            Supports the rear of the wheelchair and transmits motion during movement 
+        </p>
+        <p class="component-material">
+            Material: Aluminium alloy 
+        </p>
+        </div> 
+
+        <!-- 02: LOWER BEAM -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/Planet_Gear_Belt.PNG" alt="Lower beam CAD model">
+        </div>
+        <h3 class="component-name">Planet Gear Belt</h3>
+        <p class="component-description">
+            Transmits motion between the planetary gear mechanism and connected rotating components 
+        </p>
+        <p class="component-material">
+            Material: Reinforced rubber 
+        </p>
+        </div>
+
+
+
+        <!-- 04: TABLE PLATE -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/Brake_Clutch.PNG" alt="Table plate CAD model">
+        </div>
+        <h3 class="component-name">Brake Clutch</h3>
+        <p class="component-description">
+            Engages or disengages the braking mechanism to control wheel movement 
+        </p>
+        <p class="component-material">
+            Material: Steel
+        </p>
+        </div>
+
+        <!-- 05: PISTON -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/Front wheel.PNG" alt="Piston CAD model">
+        </div>
+        <h3 class="component-name">Front Wheel</h3>
+        <p class="component-description">
+            Supports the front of the wheelchair and enables movement over flat surfaces 
+        </p>
+        <p class="component-material">
+            Material: Rubber tyre with a aluminium wheel hub
+        </p>
+        </div>
+
+        <!-- 06: ROD -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/Hand_Supoort.PNG" alt="Piston rod CAD model">
+        </div>
+        <h3 class="component-name">Hand Support</h3>
+        <p class="component-description">
+            Provides a hand-operated interface for controlling 
+        </p>
+        <p class="component-material">
+            Material: Steel rod 
+        </p>
+        </div>
+
+        <!-- 03: UPPER BEAM -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Wheelchair/DISC BRAKE.PNG" alt="Upper beam CAD model">
+        </div>
+        <h3 class="component-name">Disc Brake</h3>
+        <p class="component-description">
+            Provides braking force to slow down or stop the wheelchair 
+        </p>
+        <p class="component-material">
+            Material: Stainless steel disc with a suitable friction pad material
+        </p>
+        </div>
+
+    </div>
+
+    </section>
+
+
+
+    <a href="projects.html" class="back-projects">← Back to projects</a>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-left">
+
+      <p class="footer-copy">
+        © 2026 Divyanshu. All rights reserved.
+      </p>
+
+      <div class="footer-contact">
+
+        <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+                      <a href="https://grabcad.com/divyanshu-10" target="_blank">grabcad</a>
+
+        <a href="mailto:divyanshu0197@gmail.com">
+          divyanshu0197@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="projects.html">
+        Projects
+      </a>
+
+      <a href="resume.html">
+        Resume
+      </a>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

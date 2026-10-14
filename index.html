@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divyanshu's Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0f1f3d;
+  --navy-mid: #1a3260;
+  --sky: #38b6d8;
+  --sky-light: #7fd4ea;
+  --sky-pale: #e0f4fa;
+  --amber: #f59e0b;
+  --emerald: #10b981;
+  --rose: #f43f5e;
+  --bg: #f4f6fa;
+  --white: #ffffff;
+  --gray: #64748b;
+  --gray-light: #e2e8f0;
+  --text: #0f172a;
+  --card-shadow: 0 4px 24px rgba(15,31,61,0.10);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #ffffff; color: var(--text); overflow-x: hidden; }
+
+/* NAV */
+    nav {
+      height: 110px;
+      padding: 0 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+    }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #16804f;
+    }
+
+    .nav-links a.active {
+      color: #16804f;
+    }
+
+    .nav-links a[href="resume.html"] {
+      background: #16804f;
+      color: #ffffff;
+      padding: 20px 25px;
+      border-radius: 0;
+    }
+
+
+/* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+
+/*Hero-Section*/
+#home {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 80px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+/* subtle grid pattern on the right half */
+#home::before {
+  content: '';
+  position: absolute; top: 0; right: 0; bottom: 0; width: 55%;
+  background-image:
+    linear-gradient(rgba(56,182,216,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,182,216,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  width: 100%; opacity: 0.5;
+}
+
+
+.hero-badge {
+  position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--navy); color: white; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; padding: 12px 18px; border-radius: 20px; white-space: nowrap; z-index: 2;
+  box-shadow: 0 4px 14px rgba(15,31,61,0.25);
+}
+
+
+/* accent blob */
+#home::after {
+  content: '';
+  position: absolute; bottom: -80px; right: 10%;
+  width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,182,216,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-left {
+  flex: 0 0 40%;
+  position: relative;
+  z-index: 1;
+  order: 2;
+}
+
+
+.hero-photo-frame {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 40px;
+    transform: translateY(-30px);
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo-frame::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(to bottom, transparent, rgba(15,31,61,0.12));
+}
+
+
+.hero-right {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transform: none;
+  padding: 0;
+  margin: 0;
+    order: 1;
+}
+
+
+.hero-right > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-text {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+      transform: translateY(-05px);
+}
+
+.hero-intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0 0 4px;
+  color: #111111;
+}
+
+.hero-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  margin: 0 0 28px;
+  color: #111111;
+}
+
+
+
+
+.hero-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 0 auto 20px;
+  color: #111111;
+}
+
+
+
+/* Decorative mechanical sketches — desktop */
+/* Decorative sketches — desktop */
+.hero-right {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-sketch {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+  height: 175px;
+}
+
+/* Upper-right, beside the heading */
+.hero-gear {
+  width: 115px;
+  top: -155px;
+  right: 625px;
+  left: auto;
+}
+
+/* Lower-left, beside the description */
+.hero-engine {
+  width: 250px; /* Increase image width */
+  bottom: 150px;    
+  height: 580px;     /* Increase image height */
+  left: -60px;
+}
+
+/* Lower-right, beside the description */
+.hero-rocket {
+  width: 250px;
+  height: 400px;
+  bottom: -230px;
+  right: -65px;
+  left: auto;
+}
+
+
+
+
+@media (max-width: 480px) {
+  #home {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px 45px;
+    text-align: center;
+  }
+
+  /* Portrait first, below the navbar */
+  .hero-left {
+    order: 1;
+    flex: none;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-photo-frame {
+    width: 280px;
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10%;
+    transform: none;
+  }
+
+  /* Text below the portrait */
+  .hero-right {
+    order: 2;
+    width: 100%;
+    flex: none;
+    min-width: 0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    transform: none;
+  }
+
+  .hero-text {
+    width: 800%;
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+
+  .hero-intro {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin: 0 0 5px;
+    transform: none;
+      font-family: 'DM Sans', sans-serif;
+          color: #111111;
+
+  }
+
+  .hero-name {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin: 0 0 22px;
+        transform: transalateY(30px);
+          font-family: 'DM Sans', sans-serif;
+              color: #111111;
+
+  }
+
+  .hero-desc {
+    width: 100%;
+    max-width: 100%;
+    font-size: 8.5px;
+    line-height: 1.5;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    color: #111111;
+    margin: 0 auto;
+    transform: transalateY(-50px);
+
+  }
+
+  /* Sketches positioned around the text */
+  .hero-sketch {
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .hero-gear {
+    width: 30px;
+    height: 10px;
+    top: -18px;
+    right: 0;
+
+  }
+
+  .hero-engine {
+    width: 90px;
+    height: 150px;
+    bottom: -95px;
+    left: -10px;
+
+  }
+
+  .hero-rocket {
+    width: 90px;
+    height: 70px;
+    bottom: -55px;
+    right: -20px;
+    left: auto;
+  }
+}
+
+
+
+  
+
+
+
+
+/* QUOTE ABOVE ABOUT SECTION */
+.home-quote {
+  background: #ffffff;
+  padding: 35px 80px 55px;
+  transform: translateX(115px);
+}
+
+.home-quote p {
+  max-width: 1050px;
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #111111;
+  margin: 0;
+}
+
+
+@media (max-width: 600px) {
+  .home-quote {
+    padding: 30px 24px 40px;
+    transform: none;
+
+  }
+
+  .home-quote p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+
+
+/* FEATURED WORK CARDS */
+.featured-work {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  padding: 50px 60px 70px;
+  background: #ffffff;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.featured-card > a:first-child {
+  display: block;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.featured-card img:hover {
+  transform: scale(1.03);
+}
+
+.featured-label {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 20px 35px;
+  background: #16804f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* MOBILE */
+
+/* MOBILE — THREE CARDS IN ONE ROW */
+@media (max-width: 600px) {
+  .featured-work {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 25px 12px 35px;
+  }
+
+  .featured-card > a:first-child {
+    width: 100%;
+    height: 110px;
+  }
+
+  .featured-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-label {
+    width: 90%;
+    margin-top: 7px;
+    padding: 9px 2px;
+    font-size: 9px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+
+
+/* ABOUT INTRO */
+
+#about-intro {
+  position: relative;
+  min-height: 480px;
+
+  display: grid;
+  grid-template-columns: 28% 72%;
+  align-items: start;
+
+  padding: 55px 80px 70px;
+
+  background: #16804f;
+  color: #ffffff;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 90%,
+    0 72%
+  );
+}
+
+.about-label {
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.about-content {
+  max-width: 900px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 400;
+  margin: 0 0 42px;
+}
+
+.about-content p {
+  font-size: 27px;
+  line-height: 1.45;
+  font-weight: 400;
+  margin: 0;
+  max-width: 900px;
+}
+
+@media (max-width: 600px) {
+  #about-intro {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 0;
+    align-items: start;
+    min-height: auto;
+    padding: 30px 20px 65px;
+
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 95%,
+      0 100%
+    );
+  }
+
+  #about-intro .about-label {
+    font-size: 18px;
+    padding-top: 0;
+  }
+
+  #about-intro .about-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #about-intro .about-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+   .about-content h2 {
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* PROJECTS INTRO */
+
+#projects {
+  min-height: 360px;
+
+  display: grid;
+  grid-template-columns: 28% 72%;
+  align-items: start;
+
+  padding: 45px 80px 100px;
+
+  background: #ffffff;
+  color: #111111;
+}
+
+.projects-label {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.projects-content {
+  max-width: 950px;
+}
+
+.projects-content h2 {
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.projects-content p {
+  font-size: 27px;
+  line-height: 1.45;
+  font-weight: 450;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  #projects {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 0;
+    align-items: start;
+    min-height: auto;
+    padding: 35px 20px 50px;
+  }
+
+  #projects .projects-label {
+    font-size: 18px;
+  }
+
+  #projects .projects-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #projects .projects-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0;
+  }
+
+    .projects-content h2 {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 50px 60px 35px;
+  background: #ffffff;
+  color: #16804f;
+  text-align: left;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-contact a,
+.footer-nav a {
+  color: #16804f;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.footer-contact a:hover,
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+
+/* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+/* Fix mobile page height and footer position */
+@media (max-width: 600px) {
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav,
+  .about-hero {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    margin-top: 0;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+.footer-nav {
+  margin-top: 58px;
+}
+
+
+.footer-contact .fa-brands {
+  font-size: 24px;
+  color: #16804f;
+}
+
+.footer-contact a:hover .fa-brands {
+  color: #000;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="index.html" class="nav-title">Divyanshu</a>
+
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — light bg, photo left, text right -->
+
+<!-- HERO SECTION -->
+<section id="home">
+
+  <!-- PHOTO — RIGHT SIDE -->
+  <div class="hero-left">
+    <div class="hero-photo-frame">
+      <img src="WhatsApp Image 2026-10-14 at 22.18.13.jpeg" alt="Divyanshu">
+    </div>
+  </div>
+
+  <!-- TEXT AND DECORATIVE SKETCHES — LEFT SIDE -->
+  <div class="hero-right">
+
+    <div class="hero-text">
+
+      <p class="hero-intro">
+        Hey! I’m Divyanshu,
+      </p>
+
+      <h1 class="hero-name">
+        a Mechanical<br>
+        Engineer.
+      </h1>
+
+      <p class="hero-desc">
+        I'm a recent Mechanical Engineering graduate from NIT Jaipur,
+        working to turn ideas into practical solutions through thoughtful design, while building my expertise in robotics and
+        technologies that push the boundaries of what's possible.<br><br>
+Scroll below to explore what I've been creating!
+      </p>
+
+
+    </div>
+
+    <!-- Decorative sketches -->
+    <img src="home6 (1).png" class="hero-sketch hero-engine" alt="">
+    <img src="sum1 (1).png" class="hero-sketch hero-rocket" alt="">
+
+  </div>
+
+</section>
+
+<section class="home-quote">
+  <p>“I believe the most meaningful work begins with understanding how things work and continues with imagining how they could work better.”</p>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="featured-work">
+
+  <div class="featured-card">
+    <a href="hybrid-cooling.html">
+      <img src="7c652a20-024e-4613-9335-bd6de8d4c364.JPG" alt="Mechanical design project">
+    </a>
+    <a href="hybrid-cooling.html" class="featured-label">
+      Hybrid Cooling<br> System
+    </a>
+  </div>
+
+  <div class="featured-card">
+    <a href="automated-dirt-removal.html">
+      <img src="Wood-Grain Ventilated Appliance with Plug.png" alt="Engineering work">
+    </a>
+    <a href="automated-dirt-removal.html" class="featured-label">
+      Automated Footwear <br>Outsole Cleaner
+    </a>
+  </div>
+
+  <div class="featured-card">
+    <a href="wheelchair.html">
+      <img src="Industrial Perforated Cart Prototype.png" alt="Engineering portfolio">
+    </a>
+    <a href="wheelchair.html" class="featured-label">
+      Stair Climbing<br>Wheelchair
+    </a>
+  </div>
+
+</section>
+
+
+
+
+<!-- ABOUT -->
+
+
+
+
+
+
+
+
+<!-- ABOUT INTRO -->
+<section id="about-intro">
+
+  <div class="about-label">
+    About
+  </div>
+
+  <div class="about-content">
+    <p><br><br>
+      The context behind the journey<br><br>
+      A little about where I started, the things I’ve discovered and where I’m headed next
+      </p>
+  </div>
+
+</section>
+
+
+
+
+<!-- PROJECTS INTRO -->
+<section id="projects">
+
+  <div class="projects-label">
+    Projects
+  </div>
+
+  <div class="projects-content">
+
+    <p><br><br>
+A look at the problems I've worked on and the solutions I've tried to find<br><br>
+
+
+
+From individual mechanisms to complete systems with multiple interconnected components.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<footer>
+
+  <div class="footer-left">
+
+
+
+            <p class="footer-copy">
+      © 2026 Divyanshu. All rights reserved.
+    </p>
+
+    <div class="footer-contact">
+        <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+      <a href="https://grabcad.com/divyanshu-10" target="_blank">GrabCAD</a>
+      <a href="mailto:divyanshu0197@gmail.com">divyanshu0197@gmail.com</a>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+  </div>
+
+</footer>
+
+</body>
+</html>

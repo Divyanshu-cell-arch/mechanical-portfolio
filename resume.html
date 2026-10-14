@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Resume — Divyanshu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+
+    /* NAV */
+
+    nav {
+      height: 110px;
+      padding: 0 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+    }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #222222;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #16804f;
+    }
+
+    .nav-links a.active {
+      color: #16804f;
+    }
+
+    .nav-links a[href="resume.html"] {
+      background: #16804f;
+      color: #ffffff;
+      padding: 20px 25px;
+    }
+
+
+
+
+
+
+/* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+
+
+
+
+
+    /* RESUME PAGE */
+
+    .resume-page {
+      padding: 20px 70px 120px;
+    }
+
+
+    /* INTRO */
+
+    .resume-intro {
+      text-align: center;
+      max-width: 1150px;
+      margin: 0 auto 65px;
+    }
+
+    .resume-intro h1 {
+      font-size: 72px;
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 55px;
+    }
+
+    .resume-intro p {
+      max-width: 1050px;
+      margin: 0 auto;
+
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+
+/* Resume intro on mobile */
+@media (max-width: 600px) {
+  .resume-page {
+    padding: 30px 24px 60px;
+  }
+
+  .resume-intro {
+    text-align: center;
+    max-width: 1150px;
+    margin: 0 auto 40px;
+    padding: 0;
+  }
+
+  .resume-intro h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+
+  .resume-intro p {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
+
+
+    /* RESUME CONTENT */
+
+    .resume-content {
+      max-width: 1400px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 58% 42%;
+      gap: 24px;
+      align-items: start;
+    }
+
+
+    /* RESUME DOCUMENT */
+
+    .resume-document {
+      width: 100%;
+      background: #f3f3f3;
+      overflow: hidden;
+    }
+
+
+
+    .resume-document img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .resume-placeholder {
+      min-height: 800px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #777777;
+      font-size: 18px;
+    }
+
+
+    /* IMAGE COLLAGE */
+
+    .resume-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      transform: translateY(30px);
+    }
+
+    .resume-image {
+      background: #eeeeee;
+      overflow: hidden;
+    }
+
+    .resume-image.large {
+      grid-column: span 2;
+      height: 390px;
+    }
+
+    .resume-image.small {
+      height: 260px;
+    }
+
+    .resume-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* DOWNLOAD */
+
+    .resume-download {
+        max-width: 1400px;
+        margin: -30px auto 25px;
+        text-align: center;
+        }
+
+    .resume-download a {
+        display: inline-block;
+        background: #16804f;
+        color: #ffffff;
+        padding: 13px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        }
+
+    .resume-download a:hover {
+        background: #126b42;
+        }
+
+
+/* Resume page on mobile */
+@media (max-width: 600px) {
+
+  /* Resume content */
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* Resume document */
+  .resume-document {
+    width: 100%;
+  }
+
+  .resume-placeholder {
+    min-height: 400px;
+    font-size: 16px;
+  }
+
+  /* Image collage */
+  .resume-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .resume-image.large {
+    grid-column: span 2;
+    height: 250px;
+  }
+
+  .resume-image.small {
+    height: 160px;
+  }
+
+  /* Download button */
+  .resume-download {
+    margin: 25px 20px 35px;
+    text-align: center;
+  }
+
+  .resume-download a {
+    padding: 12px 22px;
+    font-size: 15px;
+  }
+}
+
+
+
+    /* FOOTER */
+
+    footer {
+      min-height: 50px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      padding: 50px 60px 35px;
+
+      color: #16804f;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-contact a,
+    .footer-nav a {
+      color: #16804f;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+/* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+
+
+.footer-nav {
+  margin-top: 43px;
+}
+
+
+        .resume-document img {
+            width: 100%;
+            height: auto;
+            display: block;
+            }
+
+
+.footer-contact .fa-brands {
+  font-size: 24px;
+  color: #16804f;
+}
+
+.footer-contact a:hover .fa-brands {
+  color: #000;
+}
+
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAV -->
+
+  <nav>
+
+<a href="index.html" class="nav-title">Divyanshu</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- RESUME -->
+
+  <main class="resume-page">
+
+
+    <!-- INTRO -->
+
+    <section class="resume-intro">
+
+      <h1>
+        Resume.
+      </h1>
+
+      <p>
+        I’m a recent Mechanical Engineering graduate from NIT Jaipur looking to build a career around mechanical design and automation. I’m primarily interested in designing mechanical systems, developing automated solutions and exploring how robotics can extend what those systems are capable of.
+      </p>
+
+    </section>
+
+
+    <!-- DOWNLOAD -->
+
+    <div class="resume-download">
+
+        <a href="2022UME1109.pdf" target="_blank">
+                Download Resume
+        </a>
+
+    </div>
+
+    <!-- RESUME + IMAGES -->
+
+    <section class="resume-content">
+
+
+      <!-- RESUME -->
+
+        <div class="resume-document">
+            <img src="2022UME1109-1.png" alt="Divyanshu Resume">
+        </div>
+
+
+      <!-- IMAGES -->
+
+      <div class="resume-images">
+
+        <div class="resume-image large">
+          <span><img src="PHOTO-2026-10-15-01-31-13.jpg" alt="Divyanshu Resume"></span>
+        </div>
+
+        <div class="resume-image small">
+          <span><img src="PHOTO-2026-10-15-01-31-12 2.jpg" alt="Divyanshu Resume"></span>
+        </div>
+
+        <div class="resume-image small">
+          <span><img src="PHOTO-2026-10-15-01-31-13 2.jpg" alt="Divyanshu Resume"></span>
+        </div>
+                <div class="resume-image small">
+          <span><img src="IMG_0452.jpg" alt="Divyanshu Resume"></span>
+        </div>
+                <div class="resume-image small">
+          <span><img src="PHOTO-2026-10-15-01-31-12 5.jpg" alt="Divyanshu Resume"></span>
+        </div>
+        
+
+      </div>
+
+    </section>
+
+
+
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-left">
+
+      <p class="footer-copy">
+        © 2026 Divyanshu. All rights reserved.
+      </p>
+
+
+      <div class="footer-contact">
+        <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+                              <a
+          href="https://grabcad.com/divyanshu-10"
+          target="_blank"
+        >
+          grabcad
+        </a>
+
+        <a href="mailto:divyanshu0197@gmail.com">
+          divyanshu0197@gmail.com
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

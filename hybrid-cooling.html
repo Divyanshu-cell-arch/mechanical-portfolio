@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Design of Hydraulic Press — Divyanshu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111111;
+      background: #ffffff;
+    }
+
+
+    /* =========================
+       NAV
+    ========================= */
+
+    nav {
+      height: 110px;
+      padding: 0 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+    }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #16804f;
+    }
+
+    .nav-links a.active {
+      color: #16804f;
+    }
+
+    .nav-links a[href="resume.html"] {
+      background: #16804f;
+      color: #ffffff;
+      padding: 20px 25px;
+      border-radius: 0;
+    }
+
+    /* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+    /* =========================
+       PROJECT PAGE
+    ========================= */
+
+    .project-page {
+      padding: 0;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .project-hero-image {
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+              clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 82%
+            );
+    }
+
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* =========================
+       PROJECT TITLE
+    ========================= */
+
+    .project-title {
+      text-align: center;
+      padding: 70px 40px;
+    }
+
+    .project-title h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       OVERVIEW
+    ========================= */
+
+    .project-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      padding: 70px 80px 90px;
+    }
+
+
+
+
+    .overview-image {
+      height: 250px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+/* Enlarge only the image above Why? */
+.overview-column:first-child .overview-image img {
+  transform: scale(0.9,1.14);
+}
+
+
+    .overview-column {
+    text-align: center;
+    }
+
+    .overview-title {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 25px;
+    background: #16804f;
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    }
+
+    .overview-text {
+    background: #16804f;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 0;
+    }
+
+    .overview-text ul {
+    padding-left: 20px;
+    margin: 0;
+    }
+
+    .overview-text li {
+    margin-bottom: 25px;
+    }
+
+    .overview-text li:last-child {
+    margin-bottom: 0;
+    }
+
+
+
+    /* =========================
+       HOW
+    ========================= */
+
+    .project-how {
+      background: #16804f;
+      color: #ffffff;
+
+      padding: 90px 80px;
+
+      display: grid;
+      grid-template-columns: 28% 72%;
+
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 88%,
+        0 100%
+      );
+    }
+
+    .how-title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .how-content {
+      max-width: 850px;
+    }
+
+    .how-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+
+
+    /* =========================
+    ASSEMBLY
+    ========================= */
+
+    .project-assembly {
+    padding: 70px 80px 50px;
+    }
+
+    .assembly-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    }
+
+    .assembly-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 35px;
+    max-width: 700px;
+    }
+
+    .assembly-image {
+    width: 100%;
+    height: 560px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+
+  .assembly-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scaleX(1.7);
+}
+
+    /* =========================
+    COMPONENT BREAKDOWN
+    ========================= */
+
+    .component-section {
+    padding: 50px 80px 90px;
+    }
+
+    .component-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    }
+
+    .component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px 30px;
+    }
+
+    .component-card {
+    min-width: 0;
+    }
+
+/* Keep all image boxes consistent */
+.component-image {
+  width: 100%;
+  height: 300px; /* Use your preferred existing height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* Preserve the image proportions */
+.component-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Add breathing room before the title */
+.component-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Space the description and material consistently */
+.component-card p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.component-image img.larger-component {
+  transform: scale(1.02727);
+}
+
+    .component-name {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+
+    .component-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 8px;
+    }
+
+    .component-material {
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.5;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+    .project-assembly {
+        padding: 50px 25px 30px;
+    }
+
+    .assembly-heading,
+    .component-heading {
+        font-size: 26px;
+    }
+
+    .assembly-image {
+        height: 240px;
+    }
+
+    .component-section {
+        padding: 40px 25px 60px;
+    }
+
+    .component-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 20px;
+    }
+
+    .component-image {
+        height: 200px;
+    }
+    }
+
+    @media (max-width: 550px) {
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .component-image {
+        height: 260px;
+    }
+    }
+
+
+
+
+
+    /* =========================
+       BACK TO PROJECTS
+    ========================= */
+
+    .back-projects {
+      display: block;
+      width: fit-content;
+
+      margin: 20px 80px 80px;
+
+      color: #16804f;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .back-projects:hover {
+      color: #126b42;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      min-height: 250px;
+
+      padding: 50px 60px 35px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      color: #16804f;
+    }
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-contact,
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    footer a {
+      color: #16804f;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav {
+        padding: 0 25px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .project-hero-image {
+        height: 350px;
+      }
+
+      .project-title {
+        padding: 50px 25px;
+      }
+
+      .project-title h1 {
+        font-size: 34px;
+      }
+
+      .project-overview {
+        grid-template-columns: 1fr;
+        padding: 50px 25px;
+      }
+
+      .project-how {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 60px 25px;
+      }
+
+      .project-skills {
+        padding: 60px 25px;
+      }
+
+      .skills-images {
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .back-projects {
+        margin: 20px 25px 60px;
+      }
+/* Fix mobile page height and footer position */
+@media (max-width: 600px) {
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav,
+  .about-hero {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    margin-top: 0;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+    }
+    .footer-nav {
+  margin-top: 43px;
+}
+
+.footer-contact .fa-brands {
+  font-size: 24px;
+  color: #16804f;
+}
+
+.footer-contact a:hover .fa-brands {
+  color: #000;
+}
+
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAV
+  ========================= -->
+
+  <nav>
+
+ <a href="index.html" class="nav-title">Divyanshu</a>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="projects.html">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="resume.html">
+          Resume
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- =========================
+       PROJECT
+  ========================= -->
+
+  <main class="project-page">
+
+
+    <!-- HERO IMAGE -->
+
+    <section class="project-hero-image">
+
+      <img
+        src="27269527-58f0-41a1-a477-c0694f36652a.jpg"
+        alt="Design of Hydraulic Press"
+      >
+
+    </section>
+
+
+    <!-- PROJECT TITLE -->
+
+    <section class="project-title">
+
+      <h1>
+        Hybrid Cooling System
+      </h1>
+
+    </section>
+
+
+    <!-- =========================
+         WHY / WHAT / RESULTS
+    ========================= -->
+
+
+
+<section class="project-overview">
+
+  <!-- WHY -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+      <img src="Images/Hybrid Cooling System/k.png" alt="Bottle filling system in the robotics lab">
+    </div>
+
+    <div class="overview-title">Why?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Air coolers can make rooms more humid, while air conditioners can sometimes cause throat dryness and discomfort.</li>
+        <li>Air conditioners can also be expensive to run, leading to high monthly electricity bills.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- WHAT -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+      <img src="Images/Hybrid Cooling System/Wireframe1.PNG" alt="CAD design of the robotic arm">
+    </div>
+
+    <div class="overview-title">What?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Designed a hybrid cooling system integrating Indirect Evaporative Cooling (IEC), Direct Evaporative Cooling (DEC), and Direct Expansion (DX) modes.</li>
+        <li>Developed a control algorithm to switch between cooling modes based on ambient conditions, helping balance cooling performance and electricity consumption.</li>
+
+        <li>Integrated sensors and an ESP32-based controller to support automatic operation and system monitoring.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- RESULTS -->
+  <div class="overview-column">
+
+    <div class="overview-image">
+      <img src="IMG_0452.jpg" alt="Robotic arm design and assembly">
+    </div>
+
+    <div class="overview-title">Results?</div>
+
+    <div class="overview-text">
+      <ul>
+        <li>Reduced estimated energy consumption by 37%, potentially lowering monthly electricity costs from ₹2,000 to ₹1,250.</li>
+        <li>Minimized throat dryness and irritation by combining different cooling methods to improve indoor comfort.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+    <!-- =========================
+         HOW
+    ========================= -->
+
+    <section class="project-how">
+
+      <div class="how-title">
+        How?
+      </div>
+
+      <div class="how-content">
+
+        <p>
+            Indirect Evaporative Cooling (IEC): Outside air passes through a heat exchanger, where it is pre-cooled without directly adding moisture to the air.
+            
+        </p>
+
+        <p>
+            Direct Evaporative Cooling (DEC): The pre-cooled air passes through a water-based cooling section, where evaporation lowers its temperature further but increases humidity.
+        </p>
+
+
+        <p>
+            Direct Expansion (DX): The air then passes through the AC cooling coil, where refrigerant provides final cooling and helps control humidity before the air enters the room.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+        COMPLETE ASSEMBLY
+    ========================= -->
+
+    <section class="project-assembly">
+
+    <h2 class="assembly-heading">
+        The Assembly
+    </h2>
+
+
+
+    <div class="assembly-image">
+        <img
+        src="Images/Hybrid Cooling System/Assembly2.PNG"
+        alt="Complete hydraulic press CAD assembly"
+        >
+    </div>
+
+    </section>
+
+
+    <!-- =========================
+        COMPONENT BREAKDOWN
+    ========================= -->
+
+    <section class="component-section">
+
+    <h2 class="component-heading">
+        Component Breakdown
+    </h2>
+
+    <div class="component-grid">
+
+        <!-- 01: H-FRAME -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Body.PNG" alt="H-Frame CAD model">
+        </div>
+        <h3 class="component-name">Body</h3>
+        <p class="component-description">
+            Provides structural support and houses the cooling system components
+        </p>
+        <p class="component-material">
+            Material: Mild steel
+        </p>
+        </div>
+
+        <!-- 02: LOWER BEAM -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/IEC.PNG" alt="Lower beam CAD model">
+        </div>
+        <h3 class="component-name">IEC</h3>
+        <p class="component-description">
+            Pre cools incoming air through indirect heat exchange without directly adding moisture to the supply air 
+        </p>
+        <p class="component-material">
+            Material: Aluminium 
+        </p>
+        </div>
+
+        <!-- 03: UPPER BEAM -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/DEC.PNG" alt="Upper beam CAD model">
+        </div>
+        <h3 class="component-name">DEC</h3>
+        <p class="component-description">
+            Cools air through water evaporation and reducing air temperature while increasing humidity 
+        </p>
+        <p class="component-material">
+            Material: Confidential 
+        </p>
+        </div>
+
+        <!-- 04: TABLE PLATE -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Blower.PNG" alt="Table plate CAD model">
+        </div>
+        <h3 class="component-name">Blower</h3>
+        <p class="component-description">
+            Air is blown inside from it to enter the DEC 
+        </p>
+        <p class="component-material">
+            Material: ABS plastic
+        </p>
+        </div>
+
+        <!-- 05: PISTON -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Exhaust.PNG" alt="Piston CAD model">
+        </div>
+        <h3 class="component-name">Exhaust</h3>
+        <p class="component-description">
+            Removes hot air from the system outside IEC 
+        </p>
+        <p class="component-material">
+            Material: ABS plastic and sheet metal 
+        </p>
+        </div>
+
+        <!-- 06: ROD -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Heat Exchanger.PNG" alt="Piston rod CAD model">
+        </div>
+        <h3 class="component-name">Heat Exchanger</h3>
+        <p class="component-description">
+            Transfers heat between fluids or air streams to support the cooling process 
+        </p>
+        <p class="component-material">
+            Material: Copper tubes with aluminium fins 
+        </p>
+        </div>
+
+        <!-- 07: FASTENERS -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Compressor.PNG" alt="Fasteners CAD model">
+        </div>
+        <h3 class="component-name">Compressor</h3>
+        <p class="component-description">
+            Compresses refrigerant and circulates it through the DX cooling circuit 
+        </p>
+        <p class="component-material">
+            Material: Copper windings, steel casing and internal metal components
+        </p>
+        </div>
+
+        <!-- 08: BASE PLATE -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Monitor.PNG" alt="Base plate CAD model">
+        </div>
+        <h3 class="component-name">Monitor</h3>
+        <p class="component-description">
+            Displays system readings and allows the user to monitor operating parameters 
+        </p>
+        <p class="component-material">
+            Material: ABS plastic casing with electronic components 
+        </p>
+        </div>
+
+
+                <!-- 08: BASE PLATE -->
+        <div class="component-card">
+        <div class="component-image">
+            <img src="Images/Hybrid Cooling System/Motor.PNG" alt="Base plate CAD model">
+        </div>
+        <h3 class="component-name">Motor</h3>
+        <p class="component-description">
+            Used for functioning of blowers and exhaust 
+        </p>
+        <p class="component-material">
+            Material: Steel casing and copper windings
+        </p>
+        </div>
+
+
+    </div>
+
+    </section>
+
+
+
+    <a href="projects.html" class="back-projects">← Back to projects</a>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-left">
+
+<p class="footer-copy">
+  © 2026 Divyanshu. All rights reserved.
+</p>
+
+      <div class="footer-contact">
+
+        <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+                      <a href="https://grabcad.com/divyanshu-10" target="_blank">grabcad</a>
+
+        <a href="mailto:divyanshu0197@gmail.com">
+          divyanshu0197@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="projects.html">
+        Projects
+      </a>
+
+      <a href="resume.html">
+        Resume
+      </a>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

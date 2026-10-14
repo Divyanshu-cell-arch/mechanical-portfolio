@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About — Divyanshu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    /* NAV */
+
+
+
+
+    nav {
+        height: 110px;
+        padding: 0 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: #ffffff;
+        }
+
+.nav-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-title:visited,
+.nav-title:hover,
+.nav-title:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+        .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        list-style: none;
+        }
+
+        .nav-links a {
+        text-decoration: none;
+        color: #222222;
+        font-size: 16px;
+        }
+
+        .nav-links a:hover {
+        color: #16804f;
+        }
+
+        .nav-links a.active {
+        color: #16804f;
+        }
+
+        .nav-links a[href="resume.html"] {
+        background: #16804f;
+        color: #ffffff;
+        padding: 20px 25px;
+        border-radius: 0;
+        }
+
+
+/* Navigation on mobile — single row */
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+    min-height: 65px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-links a[href="resume.html"] {
+    padding: 9px 10px;
+  }
+}
+
+
+    /* ABOUT */
+
+
+    .about-hero {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 82%
+            );
+                }
+
+    .about-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+        display: block;
+        }
+
+    .about-page {
+      padding-top: 60px;
+    }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: 28% 72%;
+      padding: 80px;
+      min-height: 300px;
+      align-items: start;
+    }
+
+    .about-section.green {
+      background: #16804f;
+      color: #ffffff;
+              clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 82%
+            );
+    }
+
+    .about-label {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .about-content {
+      max-width: 900px;
+    }
+
+    .about-content h1,
+    .about-content h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    .about-content p {
+      font-size: 25px;
+      line-height: 1.6;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .about-signature {
+      text-align: left;
+      color: #16804f;
+      font-weight: 500;
+      transform: translate(-250px,50px);
+      font-size: 70px;
+    }
+
+.about-quote {
+  text-align: center;
+  font-size: 30px !important;
+  font-weight: 900;
+  line-height: 1.4;
+  transform: none;
+  width: 100%;
+  margin: 40px auto 0;
+  transform: translate(-170px,30px);
+}
+
+    .about-content strong {
+    font-size: 25px;
+    color: #111111;
+    }
+
+
+/* About page on mobile */
+@media (max-width: 600px) {
+  .about-hero {
+    height: 300px;
+  }
+
+  .about-hero img {
+    object-position: center 35%;
+  }
+
+  .about-page {
+    padding-top: 35px;
+  }
+
+.about-section {
+  grid-template-columns: 32% 68%;
+  gap: 12px;
+  padding: 40px 18px 60px;
+  min-height: auto;
+  align-items: start;
+}
+
+.about-content {
+  min-width: 0;
+}
+  .about-section.green {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 95%,
+      0 100%
+    );
+  }
+
+.about-label {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+  .about-content h1,
+  .about-content h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+.about-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+  .about-content strong {
+    font-size: 14px;
+  }
+
+  .about-signature {
+    font-size: 42px;
+    transform: none;
+    overflow-wrap: anywhere;
+  }
+
+
+  .about-quote {
+    font-size: 15px !important;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: center;
+    transform: none;
+    margin: 28px auto 0;
+    width: 155%;
+    height: 20px;
+    transform: translateX(-130px);  
+}
+}
+
+
+    /* FOOTER */
+
+    footer {
+      min-height: 300px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      padding: 50px 60px 35px;
+
+      color: #16804f;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+.footer-copy {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #000;
+}
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-contact a,
+    .footer-nav a {
+      color: #16804f;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+
+/* Footer on mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 35px 20px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-left {
+    min-width: 0;
+    gap: 24px;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+
+
+
+
+/* Fix mobile page height and footer position */
+@media (max-width: 600px) {
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav,
+  .about-hero {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    margin-top: 0;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+.footer-nav {
+  margin-top: 43px;
+}
+.footer-contact .fa-brands {
+  font-size: 24px;
+  color: #16804f;
+}
+
+.footer-contact a:hover .fa-brands {
+  color: #000;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+<a href="index.html" class="nav-title">Divyanshu</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+    <section class="about-hero">
+    <img src="WhatsApp Image 2026-10-15 at 00.46.39.jpeg" alt="Divyanshu">
+    </section>
+
+  <!-- ABOUT PAGE -->
+
+  <main class="about-page">
+
+
+
+
+
+    <!-- WHERE IT STARTED -->
+
+    <section class="about-section">
+
+      <div class="about-label">
+        Where it started
+      </div>
+
+      <div class="about-content">
+<br><br><br>
+        <p>
+          I’m Divyanshu, a Mechanical Engineer drawn to the
+          intersection of mechanical design, automation and robotics.
+        </p>
+
+        <p>
+Exploring these fields has broadened my understanding and deepened my curiosity about how things work and can be improved.
+        </p>
+
+   
+
+
+
+        <p class="about-quote">
+          “Somewhere between an idea and a finished product is where I find things interesting”
+        </p>
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- IN THE MAKING -->
+
+    <section class="about-section green">
+
+      <div class="about-label">
+        In the making
+      </div>
+
+      <div class="about-content">
+<br><br><br>
+        <p>
+          I’m still early in my journey, and much of what I’ve worked
+          on so far exists somewhere between an idea and a finished product.
+        </p>
+
+        <p>
+Projects are at different stages of design and development, each with its own challenges and possibilities.
+        </p>
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- THINGS I HAVE BUILT -->
+
+    <section class="about-section">
+
+
+      <div class="about-label">
+        Things i have built <br> so far
+      </div>
+
+      <div class="about-content">
+<br><br><br>
+        <p>
+          What you see here is a collection of things I’ve chosen to explore.
+          Not everything started with a clear plan, and not everything ended
+          with a finished product.
+        </p>
+
+        <p>
+          There are completed projects, experiments of my own ideas 
+          and ideas that are still evolving. Each has its own story, from the initial idea to what it became.
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- WHERE I AM -->
+
+    <section class="about-section green">
+
+      <div class="about-label">
+        Where I Am
+      </div>
+
+      <div class="about-content">
+<br><br><br>
+        <p>
+          There are still a lot of things I want to learn. I want to go
+          deeper into mechanical design while understanding more of the
+          systems around it like how things are made, how they behave and how
+          they come together.
+        </p>
+<br>
+        <p>
+          
+           
+          
+          I’m looking to pursue <strong>Mechanical Design Roles</strong>, where I can keep learning and eventually see them take shape
+           in the real world.
+        </p>
+<br>
+         <p>
+         I’m still figuring out where all of this leads and look forward to exploring these fields further through experience.
+         </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-left">
+
+      <p class="footer-copy">
+        © 2026 Divyanshu. All rights reserved.
+      </p>
+
+    <div class="footer-contact">
+        <a href="https://www.linkedin.com/in/divyanshu-255757227/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  <a href="https://github.com/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+        <a href="https://github.com/" target="_blank">grabcad</a>
+        <a href="mailto:divyanshu0197@gmail.com">divyanshu0197@gmail.com</a>
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>
